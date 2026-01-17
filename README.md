@@ -114,7 +114,3 @@ See the full LICENSE file for details.
 * DeepMind Formal Conjectures Contributors
 * Lean community maintainers (Lean 4, Lake, mathlib)
 * OpenMath & Shentu community for collaboration
-
----
-
-If you want, I can also generate a **template CONTRIBUTING.md**, **issue templates**, and **Lean module documentation boilerplate** to help onboard new contributors.
