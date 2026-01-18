@@ -10,7 +10,6 @@ Licensed under the Apache License, Version 2.0
 import Mathlib
 namespace Erdos14
 open Asymptotics Filter
-
 abbrev allUniqueSums (A : Set ℕ) : Set ℕ :=
   { n | ∃! (a : ℕ × ℕ), a.1 ≤ a.2 ∧ a.1 ∈ A ∧ a.2 ∈ A ∧ a.1 + a.2 = n }
 
@@ -33,7 +32,8 @@ Let $A ⊆ \mathbb{N}$. Let $B ⊆ \mathbb{N}$ be the set of integers which are 
 in exactly one way as the sum of two elements from $A$. Is it true that for all
 $\epsilon > 0$ and large $N$, $|\{1,\ldots,N\} \setminus B| \gg_\epsilon N^{1/2 - \epsilon}$?
 -/
-theorem erdos_14a : ∀ A, ∀ ε > 0, nonUniqueSumCount A ≫ almostSquareRoot ε := by sorry
+theorem erdos_14a : ∀ (A : Set ℕ) (ε : ℝ), ε > 0 → Asymptotics.IsBigO atTop (almostSquareRoot ε)
+    (nonUniqueSumCount A) := by sorry
 
 /--
 Is it possible that $|\{1,\ldots,N\} \setminus B| = o(N^\frac{1}{2})$?
