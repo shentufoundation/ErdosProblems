@@ -8,6 +8,7 @@ Licensed under the Apache License, Version 2.0
 -/
 
 import Mathlib
+namespace Erdos12
 /--
 A set `A` is "good" if it is infinite and there are no distinct `a,b,c` in `A`
 such that `a ∣ (b+c)` and `b > a`, `c > a`.
@@ -22,3 +23,5 @@ such that $a \mid (b+c)$ and $b,c > a$. Is it true that $∑_{n \in A} \frac{1}{
 -/
 theorem erdos_12.parts.iii : ∀ (A : Set ℕ), IsGood A → Summable (fun (n : A) ↦ (1 / n : ℝ)) := by
 sorry
+
+end Erdos12
